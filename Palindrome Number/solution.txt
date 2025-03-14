@@ -1,4 +1,0 @@
-class Solution {
-public:
-    bool isPalindrome(int x) {
-        int temp = 0;
