@@ -1,0 +1,10 @@
+class Solution {class Solution {
+public:public:
+    bool isPalindrome(int x) {    bool isPalindrome(int x) {
+        int temp = 0;        int temp = 0;
+        if (x < 0 || (x % 10 == 0 && x != 0)) {        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;            return false;
+        }        }
+        while (x > temp) {        while (x > temp) {
+            temp = temp * 10 + x % 10;            temp = temp * 10 + x % 10;
+            x /= 10;            x /= 10;
