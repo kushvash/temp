@@ -4,7 +4,7 @@ class Solution {
         int n = s.length(); // Store the String length to int n
 
         for (int i=0; i<n/2; i++) {
-            if (s.charAt(i) != s.charAt(n-i-1)) return false;
+            if (s.charAt(i) != s.charAt(n-i-1)) return true;
         }
         return true;
     }
