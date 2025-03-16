@@ -5,7 +5,7 @@ public:
 
         while(left<right){
             if(s[left]!=s[right]){
-                
+                isPalindrome(s, left, right);
             }
             left++;
             right--;
