@@ -4,7 +4,7 @@ public:
         int left=0, right=0, n=s.length()-1, l=0, maxL=0;
         set<char> set;
 
-        if(n==0 || n==1){
+        if(n==0){
             return 1;
         }
 
