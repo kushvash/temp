@@ -1,20 +1,36 @@
 class Solution {
 public:
     bool isHappy(int n) {
-        if(n==1){
-            return true;
-        }else if(n>1 && n<10){
-            return false;
+        int slow=n, fast=n;
+
+
+        slow=squareQ(slow);
+        fast=squareQ(squareQ(fast));
+        
+        while(slow!=fast){
+            if(fast==1){
+                return true;
+            }
+
+            slow=squareQ(slow);
+            fast=squareQ(squareQ(fast));
         }
 
-        int k=n, p=0;
+        return false;
+    }
 
-        while(k>0){
-            p+=(k%10)*(k%10);
-            k/=10;
+
+// private:
+    int squareQ(int n){
+        int k, p=0;
+
+        while(n>0){
+            k=n%10;
+            p+=k*k;
+            n/=10;
         }
 
 
-        return isHappy(p);
+        return p;
     }
 };
