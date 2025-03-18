@@ -3,7 +3,7 @@ public:
     bool isHappy(int n) {
         if(n==1){
             return true;
-        }else if(n>1 && n<4){
+        }else if(n>1 && n<10){
             return false;
         }
 
