@@ -16,7 +16,7 @@ public:
             fast=squareQ(squareQ(fast));
         }
 
-        return false;
+        return slow==1;
     }
 
 
