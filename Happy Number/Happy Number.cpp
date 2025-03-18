@@ -10,9 +10,10 @@ public:
         int k=n, p=0;
 
         while(k>0){
-            p+=k%10;
+            p+=(k%10)*(k%10);
             k/=10;
         }
+
 
         return isHappy(p);
     }
