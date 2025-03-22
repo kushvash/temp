@@ -20,10 +20,10 @@ public:
             newHead=newHead->next;
         }
 
-        if(n==0) {
+        if(n==0 || k==0) {
             return head;
         }
-        
+
         k=k%n;
 
         while(k--) {
