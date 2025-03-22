@@ -20,17 +20,27 @@ public:
             newHead=newHead->next;
         }
 
-        k=k%n;
-
-        while(k--) {
-            prev=prev->next;
+        if(n==0 || n==1 || k==0) {
+            return head;
         }
-        newHead=prev->next;
+
+        k=k%n;
+        k++;
+
+        newHead=head;
+
+        for(int i=0; i<k; i++) {
+            prev=newHead;
+            newHead=newHead->next;
+        }
 
         prev->next=nullptr;
 
         last->next=head;
 
         return newHead;
+
+
+    
     }
 };
