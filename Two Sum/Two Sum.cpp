@@ -6,7 +6,7 @@ public:
 
         for(int i=0; i<nums.size(); i++) {
             k=target-nums[i];
-            if(helper.find(k)==helper.end()) {
+            if(helper.find(k)!=helper.end()) {
                 return {helper[k], i};
             }
             helper[nums[i]]=i;
