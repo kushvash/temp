@@ -22,7 +22,7 @@ public:
                     start++;
                     end--;
 
-                    while(nums[start]==nums[start-1]){
+                    while(nums[start]==nums[start-1] && start<end){
                         start++;
                     }
                 }
