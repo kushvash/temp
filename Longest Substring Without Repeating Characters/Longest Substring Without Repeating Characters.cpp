@@ -5,7 +5,7 @@ public:
         unordered_set<char> helper;
 
 
-        while(l<s.size()-1){
+        while(r<s.size()){
             while(helper.find(s[r])!=helper.end()){
                 helper.erase(s[l]);
                 l++;
