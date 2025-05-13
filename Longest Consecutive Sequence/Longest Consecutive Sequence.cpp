@@ -6,11 +6,10 @@ public:
 
         for(int num: nums){
             if(helper.find(num-1)==helper.end()){
-                int curr=0;
+                int curr=1;
 
-                while(helper.find(num)!=helper.end()){
+                while(helper.find(num+curr)!=helper.end()){
                     curr++;
-                    num++;
                 }
 
                 longest=max(longest, curr);
