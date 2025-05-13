@@ -8,7 +8,7 @@ public:
             if(helper.find(num-1)==helper.end()){
                 int curr=0;
 
-                while(helper.find(num+length)!=helper.end()){
+                while(helper.find(num)!=helper.end()){
                     curr++;
                     num++;
                 }
