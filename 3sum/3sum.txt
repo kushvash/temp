@@ -6,7 +6,7 @@ public:
 
         int mid, last;
 
-        for(int start=0; start<nums.size(); start++){
+        for(int start=0; start<nums.size()-2; start++){
             if (nums[start] > 0) break;
             if (start > 0 && nums[start] == nums[start - 1]) continue;
 
