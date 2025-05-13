@@ -4,8 +4,8 @@ public:
         int longest=0, l=0, r=1;
         unordered_set<char> helper;
 
-        if(s.size()==0){
-            return 0;
+        if(s.size()==0 || s.size()==1){
+            return s.size();
         }
 
         helper.insert(s[0]);
