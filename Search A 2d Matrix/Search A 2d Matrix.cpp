@@ -18,7 +18,7 @@ public:
 
         n=lo;
 
-        if(lo>matrix.size()){
+        if(lo>=matrix.size()){
             return false;
         }
 
