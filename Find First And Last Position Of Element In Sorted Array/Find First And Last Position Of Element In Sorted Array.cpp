@@ -13,7 +13,7 @@ public:
             }
         }
 
-        if(nums.size()==0 || nums[mid]!=target){
+        if(nums.size()==0 || nums[lo]!=target){
             return {-1, -1};
         }
 
