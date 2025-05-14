@@ -1,7 +1,7 @@
 class Solution {
 public:
     int bananasFinished(vector<int>& piles, int speed){
-        int total=0;
+        double total=0;
         for(int pile: piles){
             total+=pile / speed;
 
