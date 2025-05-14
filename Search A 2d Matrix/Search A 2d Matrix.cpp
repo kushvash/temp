@@ -18,10 +18,17 @@ public:
 
         int n=hi;
 
-        if(matrix[n][0]>target){
+        if(hi<0){
             return false;
         }
-        
+        // if(matrix[n][0]>target){
+        //     return false;
+        // }
+
+        // cout<<n;
+
+        // return true;
+
         lo=0;
         hi=matrix[n].size()-1;
 
