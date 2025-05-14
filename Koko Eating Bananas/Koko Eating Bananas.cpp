@@ -2,8 +2,12 @@ class Solution {
 public:
     int bananasFinished(vector<int>& piles, int speed){
         int total=0;
-        for(int i=0; i<piles.size(); i++){
-            total+=ceil(static_cast<double>(piles[i]) / speed);
+        for(int pile: piles){
+            total+=pile / speed;
+
+            if(pile%speed!=0){
+                total++;
+            }
         }
 
         return total;
