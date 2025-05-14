@@ -17,7 +17,7 @@ public:
             }
         }
 
-        if(nums[lo]!=target || lo==nums.size()){
+        if(lo==nums.size() || nums[lo]!=target){
             return {-1,-1};
         }
 
