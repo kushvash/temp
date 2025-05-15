@@ -6,9 +6,9 @@ public:
         while(lo<hi){
             mid=lo+(hi-lo)/2;
 
-            if(nums[mid]<=t){
+            if(nums[mid]<t){
                 hi=mid;
-            }else if(nums[mid]>t){
+            }else if(nums[mid]>=t){
                 lo=mid+1;
             }
         }
