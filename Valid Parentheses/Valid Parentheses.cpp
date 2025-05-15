@@ -12,7 +12,7 @@ public:
             if(c=='{' || c=='[' || c=='('){
                 helper.push(c);
             }else{
-                if(helper.top()!=dict[c] && !helper.empty()){
+                if(helper.top()!=dict[c] && helper.empty()){
                     return false;
                 }
                 helper.pop();
