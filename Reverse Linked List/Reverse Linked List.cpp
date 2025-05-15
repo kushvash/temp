@@ -17,8 +17,8 @@ public:
             ListNode* temp=curr->next;
             curr->next=prevP;
 
-            prevP=head;
-            head=temp;
+            prevP=curr;
+            curr=temp;
         }
 
         return prevP;
