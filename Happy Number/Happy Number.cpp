@@ -3,7 +3,7 @@ public:
     int squaresCal(int n) {
         int ans=0, p;
 
-        while(n){
+        while(n>0){
             p=n%10;
             ans+=p*p;
             n/=10;
@@ -20,11 +20,11 @@ public:
                 return true;
             }
 
-            s=squaresCal(n); 
-            f=squaresCal(squaresCal(n));
+            s=squaresCal(s); 
+            f=squaresCal(squaresCal(f));
         }
 
-        return false;
+        return s==1;
 
     }
 };
