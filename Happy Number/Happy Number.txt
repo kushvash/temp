@@ -1,20 +1,30 @@
 class Solution {
 public:
+    int squaresCal(int n) {
+        int ans=0, p;
+
+        while(n){
+            p=n%10;
+            ans+=p*p;
+            n/=10;
+        }
+
+        return ans;
+    }
+
     bool isHappy(int n) {
-        if(n==1){
-            return true;
-        }else if(n==2 || n==3){
-            return false;
+        int s=n, f=n;
+
+        while(s!=1 && f!=1){
+            s=squaresCal(s);
+            f=squaresCal(squaresCal(f));
+
+            if(s==f){
+                return false;
+            }
         }
 
-        int k=n, p=0;
+        return true;
 
-        while(k>0){
-            p+=(k%10)*(k%10);
-            k/=10;
-        }
-
-
-        return isHappy(p);
     }
 };
