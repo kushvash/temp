@@ -24,7 +24,7 @@ public:
             f=squaresCal(squaresCal(f));
         }
 
-        return false;
+        return s==1;
 
     }
 };
