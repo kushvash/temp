@@ -1,36 +1,30 @@
 class Solution {
 public:
-    bool isHappy(int n) {
-        int slow=n, fast=n;
+    int squaresCal(int n) {
+        int ans=0, p;
 
-
-        slow=squareQ(slow);
-        fast=squareQ(squareQ(fast));
-        
-        while(slow!=fast){
-            if(fast==1){
-                return true;
-            }
-
-            slow=squareQ(slow);
-            fast=squareQ(squareQ(fast));
-        }
-
-        return slow==1;
-    }
-
-
-// private:
-    int squareQ(int n){
-        int k, p=0;
-
-        while(n>0){
-            k=n%10;
-            p+=k*k;
+        while(n){
+            p=n%10;
+            ans+=p*p;
             n/=10;
         }
 
+        return ans;
+    }
 
-        return p;
+    bool isHappy(int n) {
+        int s=squaresCal(n), f=squaresCal(squaresCal(n));
+
+        while(s!=f){
+            if(f==1){
+                return true;
+            }
+
+            s=squaresCal(n); 
+            f=squaresCal(squaresCal(n));
+        }
+
+        return false;
+
     }
 };
