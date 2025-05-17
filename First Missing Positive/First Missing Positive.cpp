@@ -16,6 +16,6 @@ public:
             }
         }
 
-        return nums.size();
+        return nums.size()+1;
     }
 };
